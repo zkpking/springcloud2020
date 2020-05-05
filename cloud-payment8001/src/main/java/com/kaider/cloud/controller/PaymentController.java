@@ -23,11 +23,11 @@ import java.util.List;
 @Slf4j
 public class PaymentController {
 
-    @Resource
-    private PaymentService paymentService;
-
     @Value("${server.port}")
     private String serverPort;
+
+    @Resource
+    private PaymentService paymentService;
 
     @Resource
     private DiscoveryClient discoveryClient;
@@ -63,4 +63,10 @@ public class PaymentController {
         }
         return discoveryClient;
     }
+
+    @GetMapping("getBlPort")
+    public String getBlPort() {
+        return serverPort;
+    }
+
 }
