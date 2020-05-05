@@ -1,0 +1,9 @@
+# Project exclude paths
+/cloud-eureka-server7001/target/
+/cloud-eureka-server7002/target/
+/cloudCommon/target/
+/order80/target/
+/payment8001/target/
+/payment8002/target/
+/zkOrder80/target/
+/zkPayment8004/target/
