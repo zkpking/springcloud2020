@@ -2,6 +2,7 @@ package com.kaider.cloud.controller;
 
 import com.kaider.cloud.service.PaymentService;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -30,4 +31,8 @@ public class PaymentController {
         return paymentService.no();
     }
 
+    @GetMapping("nook/{id}")
+    public String nook(@PathVariable("id") int id){
+        return paymentService.nookBreaker(id);
+    }
 }
