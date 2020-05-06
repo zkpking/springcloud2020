@@ -11,7 +11,7 @@ spring:
     password: kaider
 
 mybatis:
-  type-aliases-package: com.kaider.com.kaider.cloud.pojo #所有pojo
+  type-aliases-package: com.kaider.cloud.pojo #所有pojo
 
 eureka:
   client:

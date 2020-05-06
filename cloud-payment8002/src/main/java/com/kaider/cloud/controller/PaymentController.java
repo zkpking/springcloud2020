@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @Author kaider
@@ -47,6 +48,16 @@ public class PaymentController {
 
     @GetMapping("getBlPort")
     public String getBlPort() {
+        return serverPort;
+    }
+
+    @GetMapping("waiteTime")
+    public String waiteTime(){
+        try {
+            TimeUnit.SECONDS.sleep(3);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return serverPort;
     }
 }
