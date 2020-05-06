@@ -14,4 +14,7 @@ public interface PaymentHystrixService {
     @GetMapping("hystrix/payment/no")
     public String no();
 
+
+
+
 }
